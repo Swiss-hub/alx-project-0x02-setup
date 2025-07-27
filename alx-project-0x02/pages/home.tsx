@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Card from "@/components/common/Card";
+import Button from "@/components/common/Button";
 import PostModal from "@/components/common/PostModal";
 
 export default function HomePage() {
@@ -18,12 +19,11 @@ export default function HomePage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <h1 className="text-3xl font-bold">Home Page</h1>
-      <button
-       className="flex flex-col gap-4 w-full max-w-md"
-       onClick={() => setModalOpen(true)}
-      >
-        Add New
-      </button>
+      <Button
+        label="Add New Card"
+        onClick={() => setModalOpen(true)}
+        className="mb-4"
+      />
       <div className="flex flex-col gap-4 w-full max-w-md">
         {cards.map((card, idx) => (
           <Card key={idx} title={card.title} content={card.content} />
