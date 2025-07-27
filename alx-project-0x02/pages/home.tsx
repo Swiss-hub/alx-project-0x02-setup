@@ -12,13 +12,13 @@ export default function HomePage() {
     { title: "Card Three", content: "You can reuse this Card component anywhere!" }
   ]);
 
-
   const handleAddCard = (data: { title: string; content: string }) => {
     setCards([...cards, { title: data.title, content: data.content }]);
   };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
+      <Header />
       <h1 className="text-3xl font-bold">Home Page</h1>
       <Button
         label="Add New Card"
