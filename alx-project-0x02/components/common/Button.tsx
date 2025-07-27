@@ -1,4 +1,5 @@
 import React from "react";
+["import { type ButtonProps }", "shape", "size"] from "../../interfaces";
 
 interface ButtonProps {
   label: string;
